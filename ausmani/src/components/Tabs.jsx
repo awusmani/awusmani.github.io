@@ -1,21 +1,33 @@
-import { useState } from 'react';
-import '../styles/Tabs.css'; // optional for styling
+import { useState, useRef, useEffect } from 'react';
+import '../styles/Tabs.css';
 
-export default function Tabs() {
-  const [activeTab, setActiveTab] = useState('aboutMe');
+export default function Tabs({ activeTab, setActiveTab }) {
+  const tabRefs = useRef({});
+  const [underlineStyle, setUnderlineStyle] = useState({}); // useState, not useRef
 
   const tabs = [
-    { id: 'aboutMe', label: 'About Me', content: 'This is the content for About Me.' },
-    { id: 'exp', label: 'Experience', content: 'This is the content for Experience.' },
-    { id: 'tab3', label: 'Tab 3', content: 'This is the content for Tab 3.' },
+    { id: 'tab1', label: 'Home' },
+    { id: 'tab2', label: 'About' },
+    { id: 'tab3', label: 'Contact' },
   ];
 
+  useEffect(() => {
+    const currentTab = tabRefs.current[activeTab];
+    if (currentTab) {
+      setUnderlineStyle({
+        width: `${currentTab.offsetWidth}px`,
+        left: `${currentTab.offsetLeft}px`,
+      });
+    }
+  }, [activeTab]);
+
   return (
-    <div>
+    <div className="tabs-container">
       <div className="tabs">
         {tabs.map(tab => (
           <button
             key={tab.id}
+            ref={el => (tabRefs.current[tab.id] = el)}
             className={`tab-button ${activeTab === tab.id ? 'active' : ''}`}
             onClick={() => setActiveTab(tab.id)}
           >
@@ -23,16 +35,7 @@ export default function Tabs() {
           </button>
         ))}
       </div>
-
-      <div className="tab-content">
-        {tabs.map(tab => (
-          activeTab === tab.id && (
-            <div key={tab.id}>
-              <p>{tab.content}</p>
-            </div>
-          )
-        ))}
-      </div>
+      <span className="tab-underline" style={underlineStyle}></span>
     </div>
   );
 }
