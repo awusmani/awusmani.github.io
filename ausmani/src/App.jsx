@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 export default function App() {
   const [content, setContent] = useState('tab1');
@@ -12,7 +13,7 @@ export default function App() {
       case 'tab2':
         return <p>Learn more About us here.</p>;
       case 'tab3':
-        return <p>Get in touch through the Contact tab.</p>;
+        return <Contact />;
       default:
         return null;
     }
