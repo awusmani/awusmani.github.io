@@ -28,6 +28,7 @@
   color: #4a90e2;
 }
 
+/* Sliding underline */
 .tab-underline {
   position: absolute;
   bottom: 0;
@@ -37,6 +38,12 @@
   transition: left 0.3s ease, width 0.3s ease;
 }
 
+/* Disable transition during resize */
+.tab-underline.no-transition {
+  transition: none;
+}
+
+/* Responsive */
 @media (max-width: 400px) {
   .tabs {
     flex-wrap: wrap;
