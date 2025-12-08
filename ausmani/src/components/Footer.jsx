@@ -14,7 +14,7 @@ export default function Footer() {
         </a>
 
         <a
-          href="https://www.linkedin.com/in/your-linkedin/"
+          href="https://github.com/awusmani"
           target="_blank"
           rel="noopener noreferrer"
         >
