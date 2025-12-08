@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
+import About from './components/About';
 
 export default function App() {
   const [content, setContent] = useState('tab1');
@@ -11,7 +12,7 @@ export default function App() {
       case 'tab1':
         return <p>Welcome to the Home tab!</p>;
       case 'tab2':
-        return <p>Learn more About us here.</p>;
+        return <About />;
       case 'tab3':
         return <Contact />;
       default:

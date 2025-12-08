@@ -2,6 +2,10 @@ import { useState } from 'react';
 import emailjs from 'emailjs-com';
 import '../styles/Contact.css';
 
+const SERVICE_ID = "service_bdagcir";
+const TEMPLATE_ID = "template_bf0mtvb";
+const PUBLIC_KEY = "37Ej6QBsT";
+
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
@@ -17,10 +21,10 @@ export default function Contact() {
     e.preventDefault();
 
     emailjs.send(
-      "service_bdagcir",
-      "template_bf0mtvb",
+      SERVICE_ID,
+      TEMPLATE_ID,
       form,
-      "37Ej6QBsT-w3dpzm8"
+      PUBLIC_KEY
     ).then(() => {
       alert("Message sent!");
       setForm({ name: "", email: "", message: "" });
@@ -35,7 +39,7 @@ export default function Contact() {
       <input
         type="text"
         name="name"
-        placeholder="Your Name"
+        placeholder="Name"
         value={form.name}
         onChange={handleChange}
         required
@@ -44,7 +48,7 @@ export default function Contact() {
       <input
         type="email"
         name="email"
-        placeholder="Your Email"
+        placeholder="Email"
         value={form.email}
         onChange={handleChange}
         required
@@ -52,7 +56,7 @@ export default function Contact() {
 
       <textarea
         name="message"
-        placeholder="Your Message"
+        placeholder="Message"
         rows="5"
         value={form.message}
         onChange={handleChange}

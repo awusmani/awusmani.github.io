@@ -12,6 +12,14 @@ export default function Footer() {
         >
           LinkedIn
         </a>
+
+        <a
+          href="https://www.linkedin.com/in/your-linkedin/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github
+        </a>
       </p>
     </footer>
   );

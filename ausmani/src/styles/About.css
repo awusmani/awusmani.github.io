@@ -1,0 +1,38 @@
+.about {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+
+.about-card {
+  max-width: 800px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+.about-title {
+  margin: 0 0 8px 0;
+  font-size: 1.6rem;
+}
+
+.about-intro {
+  color: #333;
+  line-height: 1.6;
+}
+
+.about-sub {
+  margin-top: 16px;
+  font-size: 1.05rem;
+}
+
+.about-list {
+  list-style: disc;
+  margin: 8px 0 0 20px;
+}
+
+.about-text {
+  margin-top: 8px;
+  color: #444;
+}
