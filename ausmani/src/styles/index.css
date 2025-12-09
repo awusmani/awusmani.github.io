@@ -1,0 +1,10 @@
+body {
+  /* image from public/ (use leading slash) */
+  background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.3)), url('/waterfall-5207223.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* optional: parallax-like effect on desktop */
+  min-height: 100vh;
+  margin: 0;
+}

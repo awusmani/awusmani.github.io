@@ -6,6 +6,43 @@
   border-top: 1px solid #ddd;
   font-size: 0.9rem;
 }
+/* Header (frosted) + layout for social icons */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 14px;
+  background: linear-gradient(rgba(255,255,255,0.62), rgba(255,255,255,0.45));
+  backdrop-filter: blur(8px) saturate(1.05);
+  -webkit-backdrop-filter: blur(8px) saturate(1.05);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.header-left { width: 1fr; }
+.header-center { flex: 1 1 auto; display: flex; justify-content: center; }
+.header-right { display: flex; align-items: center; gap: 12px; }
+
+/* make inner tabs transparent so header backdrop shows through */
+.header .tabs-container { background: transparent; backdrop-filter: none; }
+
+.social-links { display: flex; gap: 12px; align-items: center; }
+.social-link { color: inherit; display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; text-decoration: none; }
+.social-link svg { display: block; width: 20px; height: 20px; color: #0b1220; }
+.social-link:hover { background: rgba(0,0,0,0.04); }
+
+/* Footer rules kept for compatibility */
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+}
 
 .footer a {
   color: #4a90e2;

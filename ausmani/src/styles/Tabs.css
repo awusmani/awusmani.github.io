@@ -1,57 +1,37 @@
 .tabs-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.85); /* adjust opacity/color to taste */
+  backdrop-filter: blur(4px); /* optional */
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
+/* keep rest of your tab styling intact */
 .tabs {
   display: flex;
-  gap: 10px;
+  gap: 12px;
+  padding: 10px 16px;
+  align-items: center;
 }
 
 .tab-button {
-  padding: 8px 16px;
-  cursor: pointer;
+  background: none;
   border: none;
-  background: transparent;
-  color: #333;
-  font-weight: 500;
-  position: relative;
-  transition: color 0.3s, transform 0.2s;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-.tab-button:hover {
-  transform: scale(1.05);
-}
-
-.tab-button.active {
-  color: #4a90e2;
-}
-
-/* Sliding underline */
 .tab-underline {
-  position: absolute;
-  bottom: 0;
-  height: 3px;
-  background-color: #4a90e2;
-  border-radius: 2px;
-  transition: left 0.3s ease, width 0.3s ease;
+  display: block;
+  height: 2px;
+  background: #000000e1;
+  position: relative;
+  transition: left 200ms ease, width 200ms ease;
 }
 
-/* Disable transition during resize */
-.tab-underline.no-transition {
-  transition: none;
-}
-
-/* Responsive */
-@media (max-width: 400px) {
-  .tabs {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .tab-button {
-    flex: 1 1 100%;
-    text-align: center;
-  }
+/* disable transition during resize adjustments */
+.no-transition {
+  transition: none !important;
 }

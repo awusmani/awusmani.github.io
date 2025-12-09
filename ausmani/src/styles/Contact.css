@@ -17,13 +17,96 @@
 .contact-form button {
   padding: 10px 20px;
   border: none;
-  background-color: #4a90e2;
-  color: white;
+  background-color: #000000;
+  color: inherit; /* allow specific button classes to control text color */
   font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
 }
 
-.contact-form button:hover {
-  background-color: #3578c4;
+/* Frosted glass styles for contact card and fields */
+.frosted-card {
+  border-radius: 12px;
+  padding: 22px;
+  max-width: 560px;
+  margin: 0 auto;
+  color: #0b1220;
+  background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.42));
+  backdrop-filter: blur(10px) saturate(1.05);
+  -webkit-backdrop-filter: blur(10px) saturate(1.05);
+  border: 1px solid rgba(255,255,255,0.45);
+  box-shadow: 0 8px 28px rgba(10,15,25,0.12);
+}
+
+.contact-card { /* wrapper around form (semantic) */
+  padding: 8px;
+}
+
+.frosted-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  margin: 6px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(10,15,20,0.06);
+  background: rgba(255,255,255,0.6);
+  color: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 160ms ease, transform 120ms ease, border-color 120ms ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.frosted-input:focus {
+  box-shadow: 0 6px 18px rgba(74,144,226,0.12);
+  border-color: rgba(0, 0, 0, 0.9);
+  transform: translateY(-1px);
+}
+
+/* textarea-specific: only allow vertical resizing and prevent horizontal growth */
+textarea.frosted-input,
+.contact-form textarea {
+  resize: vertical; /* user can only drag vertically */
+  min-height: 120px;
+  max-height: 420px; /* prevent excessive growth */
+  overflow: auto; /* show scrollbar when needed */
+  width: 100%; /* ensure it doesn't expand sideways */
+}
+
+.frosted-button {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.36);
+  background: linear-gradient(180deg, rgba(177, 177, 177, 0.95), rgba(255, 255, 255, 0.95));
+  color: #0b1220;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.frosted-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(64,124,206,0.18);
+  color: #0b1220
+}
+
+/* fallback for browsers without backdrop-filter */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .frosted-card { background: rgba(255,255,255,0.92); }
+  .frosted-input { background: rgba(255,255,255,0.94); }
+}
+
+@media (prefers-color-scheme: dark) {
+  .frosted-card {
+    color: #e9eef8;
+    background: linear-gradient(rgba(8,10,14,0.36), rgba(12,14,20,0.28));
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  }
+  .frosted-input {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
 }

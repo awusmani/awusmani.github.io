@@ -1,10 +1,10 @@
 import React from 'react';
-import '../styles/About.css';
+import '../styles/about.css';
 
 export default function About() {
   return (
     <section className="about">
-      <div className="about-card">
+      <div className="about-card frosted-card">
         <h2 className="about-title">About Me</h2>
         <p className="about-intro">
           Hi — I'm Wasay, a web developer who loves building clean, accessible,

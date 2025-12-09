@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
-import '../styles/Contact.css';
+import '../styles/contact.css';
 
 const SERVICE_ID = "service_bdagcir";
 const TEMPLATE_ID = "template_bf0mtvb";
@@ -35,35 +35,40 @@ export default function Contact() {
   };
 
   return (
-    <form className="contact-form" onSubmit={sendEmail}>
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={form.name}
-        onChange={handleChange}
-        required
-      />
+    <div className="contact-card frosted-card">
+      <form className="contact-form" onSubmit={sendEmail}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={form.name}
+          onChange={handleChange}
+          required
+          className="frosted-input"
+        />
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={form.email}
-        onChange={handleChange}
-        required
-      />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={form.email}
+          onChange={handleChange}
+          required
+          className="frosted-input"
+        />
 
-      <textarea
-        name="message"
-        placeholder="Message"
-        rows="5"
-        value={form.message}
-        onChange={handleChange}
-        required
-      />
+        <textarea
+          name="message"
+          placeholder="Message"
+          rows="5"
+          value={form.message}
+          onChange={handleChange}
+          required
+          className="frosted-input"
+        />
 
-      <button type="submit">Send</button>
-    </form>
+        <button type="submit" className="frosted-button">Send</button>
+      </form>
+    </div>
   );
 }
