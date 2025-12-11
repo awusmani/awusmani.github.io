@@ -4,6 +4,7 @@ import Contact from './components/Contact';
 import Header from './components/Header';
 import './styles/app.css';
 import Experience from './components/Experience';
+import Home from './components/Home';
 
 export default function App() {
 
@@ -13,22 +14,18 @@ export default function App() {
 
       <main>
         <section id="tab1" className="page-section">
-          <h1>Home</h1>
-          <p>Home content...</p>
+          <Home />
         </section>
 
         <section id="tab2" className="page-section">
-          <h1>About</h1>
           <About />
         </section>
 
         <section id="tab3" className="page-section">
-          <h1>Experience</h1>
           <Experience />
         </section>
 
         <section id="tab4" className="page-section">
-          <h1>Contact</h1>
           <Contact />
         </section>
       </main>
