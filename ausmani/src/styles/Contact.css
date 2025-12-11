@@ -29,7 +29,7 @@
   border-radius: 12px;
   padding: 22px;
   max-width: 560px;
-  margin: 0 auto;
+  margin: auto 350px auto auto;
   color: #0b1220;
   background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.42));
   backdrop-filter: blur(10px) saturate(1.05);
@@ -56,6 +56,11 @@
   transition: box-shadow 160ms ease, transform 120ms ease, border-color 120ms ease;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+}
+
+.frosted-input::placeholder {
+  color: #efefefb5;
+  opacity: 0.75;
 }
 
 .frosted-input:focus {

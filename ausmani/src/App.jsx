@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import Tabs from './components/Tabs';
 import About from './components/About';
 import Contact from './components/Contact';
+import Header from './components/Header';
 import './styles/app.css';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('tab1');
+  // const [activeTab, setActiveTab] = useState('tab1');
 
   return (
     <div className="app">
-      <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Header />
 
       <main>
         <section id="tab1" className="page-section">

@@ -5,22 +5,17 @@ html {
 
 /* If your Tabs bar is sticky at the top, give sections a scroll offset */
 .page-section {
-  min-height: 100vh;            /* each section fills viewport */
+  min-height: 50vh;            /* each section fills viewport */
   padding: 80px 24px 40px;     /* top padding to avoid being hidden under sticky tabs */
   box-sizing: border-box;
   scroll-margin-top: 72px;     /* ensures browser scroll lands below sticky header */
 }
 
-/* optional visuals */
-.page-section:nth-child(odd) {
-  background: rgba(255,255,255,0.02);
-}
+/* Different heights for each tab section */
+.page-section:nth-child(1) { min-height: 40vh; } /* Home */
+.page-section:nth-child(2) { min-height: 40vh; } /* About */
+.page-section:nth-child(3) { min-height: 100vh; } /* Experience */
+.page-section:nth-child(4) { min-height: 50vh; } /* Contact */
 
-/* ensure the tabs container is sticky (assuming Tabs.css doesn't already do this) */
-.tabs-container {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(4px);
-}
+
+

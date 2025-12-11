@@ -1,18 +1,12 @@
-.tabs-container {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255,255,255,0.85); /* adjust opacity/color to taste */
-  backdrop-filter: blur(4px); /* optional */
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
 /* keep rest of your tab styling intact */
 .tabs {
   display: flex;
   gap: 12px;
   padding: 10px 16px;
   align-items: center;
+  justify-content: center; /* center the tab buttons horizontally */
+  position: relative; /* sit above the pseudo-element */
+  z-index: 1;
 }
 
 .tab-button {
@@ -25,7 +19,7 @@
 
 .tab-underline {
   display: block;
-  height: 2px;
+  height: 4px;
   background: #000000e1;
   position: relative;
   transition: left 200ms ease, width 200ms ease;
@@ -33,5 +27,5 @@
 
 /* disable transition during resize adjustments */
 .no-transition {
-  transition: none !important;
+  transition: none;
 }

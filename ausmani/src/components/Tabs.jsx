@@ -3,8 +3,10 @@ import '../styles/tabs.css';
 
 export default function Tabs({ activeTab, setActiveTab }) {
   const tabRefs = useRef({});
+  const timeoutRef = useRef(null); // track timeout ID to reset on each click
   const [underlineStyle, setUnderlineStyle] = useState({});
   const [isResizing, setIsResizing] = useState(false);
+  const [isManualClick, setIsManualClick] = useState(false); // track if user clicked a tab
 
   const tabs = [
     { id: 'tab1', label: 'Home' },
@@ -44,6 +46,7 @@ export default function Tabs({ activeTab, setActiveTab }) {
   }, [activeTab]);
 
   // Scroll spy: observe page sections and update activeTab as user scrolls
+  // (disabled if user manually clicked a tab)
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -52,11 +55,14 @@ export default function Tabs({ activeTab, setActiveTab }) {
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveTab(entry.target.id);
-        }
-      });
+      // only update if user didn't manually click a tab
+      if (!isManualClick) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveTab(entry.target.id);
+          }
+        });
+      }
     }, observerOptions);
 
     tabs.forEach((t) => {
@@ -65,14 +71,22 @@ export default function Tabs({ activeTab, setActiveTab }) {
     });
 
     return () => observer.disconnect();
-  }, [setActiveTab]); // tabs is stable here
+  }, [setActiveTab, isManualClick]); // include isManualClick in dependency array
 
   const handleClick = (tabId) => {
+    // clear previous timeout
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    
     setActiveTab(tabId);
+    setIsManualClick(true); // disable scroll-spy updates
     const el = document.getElementById(tabId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    // re-enable scroll-spy after 1 second (user can manually override by scrolling)
+    timeoutRef.current = setTimeout(() => setIsManualClick(false), 1000);
   };
 
   return (
