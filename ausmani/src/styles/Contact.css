@@ -29,7 +29,6 @@
   border-radius: 12px;
   padding: 22px;
   max-width: 560px;
-  margin: auto 350px auto auto;
   color: #0b1220;
   background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.42));
   backdrop-filter: blur(10px) saturate(1.05);
@@ -40,6 +39,7 @@
 
 .contact-card { /* wrapper around form (semantic) */
   padding: 8px;
+  margin: auto 350px auto auto;
 }
 
 .frosted-input {

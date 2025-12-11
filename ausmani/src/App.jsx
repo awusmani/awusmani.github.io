@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
 import Tabs from './components/Tabs';
 import About from './components/About';
 import Contact from './components/Contact';
 import Header from './components/Header';
 import './styles/app.css';
+import Experience from './components/Experience';
 
 export default function App() {
-  // const [activeTab, setActiveTab] = useState('tab1');
 
   return (
     <div className="app">
@@ -25,6 +24,7 @@ export default function App() {
 
         <section id="tab3" className="page-section">
           <h1>Experience</h1>
+          <Experience />
         </section>
 
         <section id="tab4" className="page-section">
