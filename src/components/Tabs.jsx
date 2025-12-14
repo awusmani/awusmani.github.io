@@ -50,7 +50,7 @@ export default function Tabs({ activeTab, setActiveTab }) {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '-40% 0px -40% 0px', // section considered "active" when near center
+      rootMargin: '-10% 0px -60% 0px', // section considered "active" when near center
       threshold: 0,
     };
 
