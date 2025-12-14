@@ -101,27 +101,27 @@
   margin: 0;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #ffffff;
 }
 
 .timeline-years {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #ffffff;
 }
 
 .position {
   margin: 8px 0 4px 0;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #ffffff;
 }
 
 .description {
   margin: 0;
   font-size: 0.9rem;
-  color: #ffffff;
   line-height: 1.5;
+}
+
+.timeline-text {
+  color: #000000;
 }
 
 /* Responsive: stack vertically on small screens */
