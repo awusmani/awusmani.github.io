@@ -4,26 +4,6 @@
   padding: 16px;
 }
 
-/* graceful fallback for browsers without backdrop-filter */
-@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
-  .frosted-card {
-    background: rgba(255,255,255,0.92);
-  }
-}
-
-/* optional dark mode tweak */
-@media (prefers-color-scheme: dark) {
-  .frosted-card {
-    color: #e9eef8;
-    background: linear-gradient(
-      rgba(10,12,18,0.35),
-      rgba(12,14,20,0.28)
-    );
-    border: 1px solid rgba(255,255,255,0.06);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
-  }
-}
-
 .about-title {
   margin: 0 0 8px 0;
   font-size: 1.6rem;

@@ -28,6 +28,18 @@ export default function Home() {
           <div class="shadow">L</div>
         </div>
         <div class="wrapper">
+          <div id="space" class="letter"></div>
+          <div class="shadow"> </div>
+        </div>
+        <div class="wrapper">
+          <div id="W" class="letter">W</div>
+          <div class="shadow">W</div>
+        </div>
+        <div class="wrapper">
+          <div id="space" class="letter"></div>
+          <div class="shadow"> </div>
+        </div>
+        <div class="wrapper">
           <div id="Utwo" class="letter">U</div>
           <div class="shadow">U</div>
         </div>

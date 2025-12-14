@@ -5,31 +5,31 @@ export default function Experience() {
   const experiences = [
     {
       id: 1,
-      company: 'Tech Company Inc.',
-      position: 'Senior Developer',
+      company: 'FINRA',
+      position: 'Software Engineer',
       years: '2022 - Present',
-      description: 'Led development of core platform features and mentored junior developers.',
+      description: 'Java/Scala backend development and testing, Api development using Spring Boot, AWS microservices.',
     },
     {
       id: 2,
-      company: 'StartUp Labs',
-      position: 'Full Stack Developer',
-      years: '2020 - 2022',
-      description: 'Built and maintained full-stack web applications using React and Node.js.',
+      company: 'Softek Enterprises',
+      position: 'Software Engineer',
+      years: '2021 - 2022',
+      description: 'Python backend development and lambda functions for data processing tasks.',
     },
     {
       id: 3,
-      company: 'Design Studio Pro',
-      position: 'Junior Web Developer',
-      years: '2019 - 2020',
-      description: 'Developed responsive websites and collaborated with design team.',
+      company: 'Softek Enterprises',
+      position: 'Junior Test Engineer',
+      years: '2019 - 2021',
+      description: 'Front end testing in Cucumber, Selenium and JUnit frameworks.',
     },
     {
       id: 4,
-      company: 'Freelance',
-      position: 'Web Developer',
-      years: '2018 - 2019',
-      description: 'Created custom websites and web applications for various clients.',
+      company: 'University of Maryland, College Park',
+      position: 'BS in Computer Science',
+      years: '2016 - 2018',
+      description: '',
     },
   ];
 
@@ -38,7 +38,7 @@ export default function Experience() {
       <div className="timeline">
         {experiences.map((exp, index) => (
           <div key={exp.id} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
-            <div className="timeline-content">
+            <div className="timeline-content frosted-card">
               <div className="timeline-header">
                 <h3 className="company-name">{exp.company}</h3>
                 <span className="timeline-years">{exp.years}</span>

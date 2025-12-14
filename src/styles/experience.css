@@ -17,7 +17,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, #4a90e2, rgba(74, 144, 226, 0.2));
+  background: linear-gradient(180deg, #3b3b3b, rgba(161, 172, 185, 0.2));
   transform: translateX(-50%);
   z-index: 1;
 }
@@ -68,20 +68,20 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #4a90e2, #357abd);
+  background: linear-gradient(135deg, #b8bcc8, #3b3b3b);
   border: 4px solid #ffffff;
-  box-shadow: 0 0 0 2px #4a90e2;
+  box-shadow: 0 0 0 2px #3b3b3b;
   z-index: 10;
 }
 
 .timeline-content {
   padding: 20px;
-  background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.42));
-  backdrop-filter: blur(8px) saturate(1.05);
-  -webkit-backdrop-filter: blur(8px) saturate(1.05);
-  border: 1px solid rgba(255,255,255,0.45);
+  /* background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.42)); */
+  /* backdrop-filter: blur(8px) saturate(1.05); */
+  /* -webkit-backdrop-filter: blur(8px) saturate(1.05); */
+  /* border: 1px solid rgba(255,255,255,0.45); */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(10,15,25,0.08);
+  /* box-shadow: 0 4px 12px rgba(10,15,25,0.08); */
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
@@ -101,26 +101,26 @@
   margin: 0;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #0b1220;
+  color: #ffffff;
 }
 
 .timeline-years {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #4a90e2;
+  color: #ffffff;
 }
 
 .position {
   margin: 8px 0 4px 0;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #333;
+  color: #ffffff;
 }
 
 .description {
   margin: 0;
   font-size: 0.9rem;
-  color: #666;
+  color: #ffffff;
   line-height: 1.5;
 }
 
@@ -161,29 +161,5 @@
 
   .timeline-years {
     font-size: 0.8rem;
-  }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .timeline-content {
-    background: linear-gradient(rgba(8,10,14,0.36), rgba(12,14,20,0.28));
-    border: 1px solid rgba(255,255,255,0.06);
-  }
-
-  .company-name {
-    color: #e9eef8;
-  }
-
-  .timeline-years {
-    color: #7db3f5;
-  }
-
-  .position {
-    color: #b8bcc8;
-  }
-
-  .description {
-    color: #9096a0;
   }
 }

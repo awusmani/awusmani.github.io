@@ -1,8 +1,8 @@
+import './styles/app.css';
 import Tabs from './components/Tabs';
 import About from './components/About';
 import Contact from './components/Contact';
 import Header from './components/Header';
-import './styles/app.css';
 import Experience from './components/Experience';
 import Home from './components/Home';
 

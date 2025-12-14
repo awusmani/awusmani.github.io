@@ -8,13 +8,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-left" aria-hidden>
-        <a
-          href="https://github.com/awusmani"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/public/github-mark.png" alt="GitHub" />
-        </a>
+        <img src="/android-chrome-512x512.png" alt="myLogo" />
       </div>
 
       <div className="header-center">
@@ -27,14 +21,14 @@ export default function Header() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/public/github-mark.png" alt="GitHub" />
+          <img src="/github-mark.png" alt="GitHub" />
         </a>
         <a
           href="https://www.linkedin.com/in/awusmani/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/public/InBug-Black.png" alt="LinkedIn" />
+          <img src="/InBug-Black.png" alt="LinkedIn" />
         </a>
       </div>
     </header>
