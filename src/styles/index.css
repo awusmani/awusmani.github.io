@@ -13,13 +13,12 @@ body {
 .frosted-card {
   border-radius: 12px;
   padding: 22px;
-  max-width: 560px;
   color: #0b1220;
   background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.42));
   backdrop-filter: blur(10px) saturate(1.05);
   -webkit-backdrop-filter: blur(10px) saturate(1.05);
   border: 1px solid rgba(255,255,255,0.45);
-  box-shadow: 0 8px 28px rgba(10,15,25,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
 .frosted-input {
@@ -80,7 +79,6 @@ body {
     color: white;
     background: linear-gradient(rgba(8,10,14,0.36), rgba(12,14,20,0.28));
     border: 1px solid rgba(255,255,255,0.06);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
   }
   .frosted-input {
     border: 1px solid rgba(255,255,255,0.06);

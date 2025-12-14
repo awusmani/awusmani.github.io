@@ -1,7 +1,11 @@
 .about {
   display: flex;
   justify-content: center;
-  padding: 16px;
+  padding: 15px;
+}
+
+.about-card {
+  max-width: 1500px;
 }
 
 .about-title {

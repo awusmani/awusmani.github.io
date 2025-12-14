@@ -27,6 +27,7 @@
 .contact-card { /* wrapper around form (semantic) */
   padding: 8px;
   margin: auto 350px auto auto;
+  max-width: 500px;
 }
 
 /* textarea-specific: only allow vertical resizing and prevent horizontal growth */

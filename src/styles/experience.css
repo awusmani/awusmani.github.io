@@ -17,7 +17,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, #3b3b3b, rgba(161, 172, 185, 0.2));
+  background: linear-gradient(180deg,#ffffff, #989ba2);
   transform: translateX(-50%);
   z-index: 1;
 }
@@ -68,9 +68,9 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #b8bcc8, #3b3b3b);
+  background: linear-gradient(135deg, #989ba2, #ffffff);
   border: 4px solid #ffffff;
-  box-shadow: 0 0 0 2px #3b3b3b;
+  box-shadow: 0 0 0 2px #989ba2;
   z-index: 10;
 }
 
@@ -81,7 +81,7 @@
   /* -webkit-backdrop-filter: blur(8px) saturate(1.05); */
   /* border: 1px solid rgba(255,255,255,0.45); */
   border-radius: 12px;
-  /* box-shadow: 0 4px 12px rgba(10,15,25,0.08); */
+  /* box-shadow: 0 4px 12px rgb(255, 0, 0); */
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
@@ -161,5 +161,15 @@
 
   .timeline-years {
     font-size: 0.8rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .timeline-dot {
+    background: linear-gradient(135deg, #b8bcc8, #3b3b3b);
+  }
+
+  .timeline::before {
+    background: linear-gradient(180deg, #3b3b3b, rgba(161, 172, 185, 0.2));
   }
 }
