@@ -4,64 +4,64 @@ import "../styles/home.css";
 export default function Home() {
   return (
     <section className="home">
-      <div class="overlay"></div>
+      <div className="overlay"></div>
 
-      <div class="nametext">
-        <div class="wrapper">
-          <div id="A" class="letter">A</div>
-          <div class="shadow">A</div>
+      <div className="nametext">
+        <div className="wrapper">
+          <div id="A" className="letter">A</div>
+          <div className="shadow">A</div>
         </div>
-        <div class="wrapper">
-          <div id="B" class="letter">B</div>
-          <div class="shadow">B</div>
+        <div className="wrapper">
+          <div id="B" className="letter">B</div>
+          <div className="shadow">B</div>
         </div>
-        <div class="wrapper">
-          <div id="D" class="letter">D</div>
-          <div class="shadow">D</div>
+        <div className="wrapper">
+          <div id="D" className="letter">D</div>
+          <div className="shadow">D</div>
         </div>
-        <div class="wrapper">
-          <div id="U" class="letter">U</div>
-          <div class="shadow">U</div>
+        <div className="wrapper">
+          <div id="U" className="letter">U</div>
+          <div className="shadow">U</div>
         </div>
-        <div class="wrapper">
-          <div id="L" class="letter">L</div>
-          <div class="shadow">L</div>
+        <div className="wrapper">
+          <div id="L" className="letter">L</div>
+          <div className="shadow">L</div>
         </div>
-        <div class="wrapper">
-          <div id="space" class="letter"></div>
-          <div class="shadow"> </div>
+        <div className="wrapper">
+          <div id="space" className="letter"></div>
+          <div className="shadow"> </div>
         </div>
-        <div class="wrapper">
-          <div id="W" class="letter">W</div>
-          <div class="shadow">W</div>
+        <div className="wrapper">
+          <div id="W" className="letter">W</div>
+          <div className="shadow">W</div>
         </div>
-        <div class="wrapper">
-          <div id="space" class="letter"></div>
-          <div class="shadow"> </div>
+        <div className="wrapper">
+          <div id="space" className="letter"></div>
+          <div className="shadow"> </div>
         </div>
-        <div class="wrapper">
-          <div id="Utwo" class="letter">U</div>
-          <div class="shadow">U</div>
+        <div className="wrapper">
+          <div id="Utwo" className="letter">U</div>
+          <div className="shadow">U</div>
         </div>
-        <div class="wrapper">
-          <div id="S" class="letter">S</div>
-          <div class="shadow">S</div>
+        <div className="wrapper">
+          <div id="S" className="letter">S</div>
+          <div className="shadow">S</div>
         </div>
-        <div class="wrapper">
-          <div id="M" class="letter">M</div>
-          <div class="shadow">M</div>
+        <div className="wrapper">
+          <div id="M" className="letter">M</div>
+          <div className="shadow">M</div>
         </div>
-        <div class="wrapper">
-          <div id="Atwo" class="letter">A</div>
-          <div class="shadow">A</div>
+        <div className="wrapper">
+          <div id="Atwo" className="letter">A</div>
+          <div className="shadow">A</div>
         </div>
-        <div class="wrapper">
-          <div id="N" class="letter">N</div>
-          <div class="shadow">N</div>
+        <div className="wrapper">
+          <div id="N" className="letter">N</div>
+          <div className="shadow">N</div>
         </div>
-        <div class="wrapper">
-          <div id="I" class="letter">I</div>
-          <div class="shadow">I</div>
+        <div className="wrapper">
+          <div id="I" className="letter">I</div>
+          <div className="shadow">I</div>
         </div>
       </div>
     </section>

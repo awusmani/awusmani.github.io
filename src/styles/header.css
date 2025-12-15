@@ -22,4 +22,4 @@
 .header-center { justify-self: center; display: flex; justify-content: center; }
 .header-right { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
 
-img { width: 30px; height: auto; }
+img { width: 2rem; height: auto; }

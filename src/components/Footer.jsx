@@ -3,24 +3,11 @@ import '../styles/footer.css';
 export default function Footer() {
   return (
     <footer className="footer">
-      <p>
-        &copy; {new Date().getFullYear()} Abdul Wasay Usmani{' '}
-        <a
-          href="https://www.linkedin.com/in/your-linkedin/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-
-        <a
-          href="https://github.com/awusmani"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Github
-        </a>
-      </p>
+      <div className="footer-left" aria-hidden>
+      </div>
+      <div className="footer-center">
+        &copy; {new Date().getFullYear()} Abdul W Usmani{' '}
+      </div>
     </footer>
   );
 }

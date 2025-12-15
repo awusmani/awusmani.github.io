@@ -24,15 +24,14 @@
 		padding-right: 20px;
 		padding-top: 20px;
 		.letter {
-			transition: ease-out 1s;
 			transform: translateY(40%);
 		}
 		.shadow {
-  transform: scale(1, -1);
-  background: linear-gradient(to top, #4f4f4f 0%, transparent 70%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+			transform: scale(1, -1);
+			background: linear-gradient(to top, #4f4f4f 0%, transparent 70%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
 	}
 }
