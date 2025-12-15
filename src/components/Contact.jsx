@@ -36,7 +36,7 @@ export default function Contact() {
 
   return (
     <div className="contact-card frosted-card">
-      <h2>Lets Chat</h2>
+      <h2>Lets Connect -</h2>
 
       <form className="contact-form" onSubmit={sendEmail}>
         <input
