@@ -40,14 +40,12 @@
 .timeline-item.left .timeline-content {
   grid-column: 1;
   text-align: right;
+  align-self: center;
 }
 
 .timeline-item.left .timeline-dot {
   grid-column: 2;
-}
-
-.timeline-item.left .timeline-content ~ .timeline-dot {
-  order: -1;
+  align-self: center;
 }
 
 /* Right-aligned content */
@@ -57,11 +55,15 @@
 
 .timeline-item.right .timeline-content {
   grid-column: 3;
+  grid-row: 1;
   text-align: left;
+  align-self: center;
 }
 
 .timeline-item.right .timeline-dot {
   grid-column: 2;
+  grid-row: 1;
+  align-self: center;
 }
 
 .timeline-dot {
@@ -114,14 +116,40 @@
   font-weight: 600;
 }
 
-.description {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
 .timeline-text {
   color: #000000;
+}
+
+.description-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-item.left .description-list li {
+  position: relative;
+  padding-right: 1.5em;
+  text-align: right;
+}
+
+.timeline-item.left .description-list li::after {
+  content: "•";
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.timeline-item.right .description-list li {
+  position: relative;
+  padding-left: 1.5em;
+  text-align: left;
+}
+
+.timeline-item.right .description-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /* Responsive: stack vertically on small screens */

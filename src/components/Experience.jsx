@@ -8,28 +8,38 @@ export default function Experience() {
       company: 'FINRA',
       position: 'Software Engineer',
       years: '2022 - Present',
-      description: 'Java/Scala backend development and testing, Api development using Spring Boot, AWS microservices.',
+      description: [
+        'Java/Scala backend development and testing',
+        'Api development using Spring Boot',
+        'AWS microservices',
+      ],
     },
     {
       id: 2,
       company: 'Softek Enterprises',
       position: 'Software Engineer',
       years: '2021 - 2022',
-      description: 'Python backend development and lambda functions for data processing tasks.',
+      description: [
+        'Python backend development',
+        'Lambda functions for data processing tasks',
+      ],
     },
     {
       id: 3,
       company: 'Softek Enterprises',
       position: 'Junior Test Engineer',
       years: '2019 - 2021',
-      description: 'Front end testing in Cucumber, Selenium and JUnit frameworks.',
+      description: [
+        'Front end testing in Cucumber',
+        'Selenium and JUnit frameworks',
+      ],
     },
     {
       id: 4,
       company: 'University of Maryland, College Park',
       position: 'BS in Computer Science',
       years: '2016 - 2018',
-      description: '',
+      description: [],
     },
   ];
 
@@ -44,7 +54,13 @@ export default function Experience() {
                 <span className="timeline-years">{exp.years}</span>
               </div>
               <p className="position">{exp.position}</p>
-              <p className="description">{exp.description}</p>
+              {exp.description.length > 0 && (
+                <ul className="description-list">
+                  {exp.description.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              )}
             </div>
             <div className="timeline-dot"></div>
           </div>
