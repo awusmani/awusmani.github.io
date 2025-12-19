@@ -16,7 +16,7 @@
   left: 50%;
   top: 0;
   bottom: 0;
-  width: 2px;
+  width: 3px;
   background: linear-gradient(180deg,#ffffff, #989ba2);
   transform: translateX(-50%);
   z-index: 1;
@@ -157,28 +157,28 @@
 /* Responsive: stack vertically on small screens */
 @media (max-width: 769px) {
   .timeline::before {
-    left: clamp(18px, 3vw, 20px);
+    display: none;
   }
 
   .timeline-item {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     gap: clamp(15px, 3vw, 20px);
   }
 
   .timeline-item.left,
   .timeline-item.right {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
   }
 
   .timeline-item.left .timeline-content,
   .timeline-item.right .timeline-content {
-    grid-column: 2;
+    grid-column: 1;
     text-align: left;
   }
 
   .timeline-item.left .timeline-dot,
   .timeline-item.right .timeline-dot {
-    grid-column: 1;
+    display: none;
   }
 
   .timeline-item.left .description-list li,
