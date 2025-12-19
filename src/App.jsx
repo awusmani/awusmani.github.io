@@ -19,11 +19,11 @@ export default function App() {
         </section>
 
         <section id="tab2" className="page-section">
-          {/* <About /> */}
+          <About />
         </section>
 
         <section id="tab3" className="page-section">
-          {/* <Experience /> */}
+          <Experience />
         </section>
 
         <section id="tab4" className="page-section">

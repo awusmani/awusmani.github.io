@@ -12,10 +12,10 @@ html {
 }
 
 /* Different heights for each tab section */
-.page-section:nth-child(1) { min-height: 40vh; } /* Home */
-.page-section:nth-child(2) { min-height: 40vh; } /* About */
-.page-section:nth-child(3) { min-height: 50vh; } /* Experience */
-.page-section:nth-child(4) { min-height: 50vh; } /* Contact */
+.page-section:nth-child(1) { min-height: 35vh; } /* Home */
+.page-section:nth-child(2) { min-height: 60vh; } /* About */
+.page-section:nth-child(3) { min-height: 60vh; } /* Experience */
+.page-section:nth-child(4) { min-height: 60vh; } /* Contact */
 
 
 

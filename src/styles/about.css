@@ -1,7 +1,7 @@
 .about {
   display: flex;
   justify-content: center;
-  padding: 15px;
+  padding: clamp(10px, 2vw, 15px);
 }
 
 .about-card {
@@ -9,24 +9,27 @@
 }
 
 .about-title {
-  margin: 0 0 8px 0;
-  font-size: 1.6rem;
+  margin: 0 0 clamp(6px, 1.5vw, 8px) 0;
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
 }
 
 .about-intro {
   line-height: 1.6;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .about-sub {
-  margin-top: 16px;
-  font-size: 1.05rem;
+  margin-top: clamp(12px, 2.5vw, 16px);
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
 }
 
 .about-list {
   list-style: disc;
-  margin: 8px 0 0 20px;
+  margin: clamp(6px, 1.5vw, 8px) 0 0 clamp(16px, 3vw, 20px);
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .about-text {
-  margin-top: 8px;
+  margin-top: clamp(6px, 1.5vw, 8px);
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
