@@ -1,34 +1,34 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  width: 25rem;
-  margin: auto 5rem auto auto;
-  
+  gap: clamp(8px, 2vw, 12px);
+  width: clamp(20rem, 50vw, 25rem);
+  margin: auto clamp(2rem, 8vw, 5rem) auto auto;
+
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 10px;
+  padding: clamp(8px, 2vw, 10px);
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: clamp(4px, 1vw, 6px);
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .contact-form button {
-  padding: 10px 20px;
+  padding: clamp(8px, 2vw, 10px) clamp(16px, 4vw, 20px);
   border: none;
   background-color: #000000;
   color: inherit; /* allow specific button classes to control text color */
-  font-size: 1rem;
-  border-radius: 6px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  border-radius: clamp(4px, 1vw, 6px);
   cursor: pointer;
 }
 
 .contact-card { /* wrapper around form (semantic) */
   display: grid;
   grid-template-columns: 1fr auto;
-  padding: 8px;
+  padding: clamp(6px, 1.5vw, 8px);
   margin: auto;
   max-width: 1200px;
 }
@@ -36,18 +36,36 @@
 .contact-card h2 {
   font-family: "Yanone Kaffeesatz";
   font-weight: 300;
-  font-size: 500%;
-  margin: auto auto auto 100px;
+  font-size: clamp(3rem, 10vw, 5rem);
+  margin: auto auto auto clamp(2rem, 15vw, 100px);
 }
 
 /* textarea-specific: only allow vertical resizing and prevent horizontal growth */
 textarea.frosted-input,
 .contact-form textarea {
   resize: vertical; /* user can only drag vertically */
-  min-height: 120px;
-  max-height: 420px; /* prevent excessive growth */
+  min-height: clamp(100px, 20vw, 120px);
+  max-height: clamp(300px, 60vw, 420px); /* prevent excessive growth */
   overflow: auto; /* show scrollbar when needed */
   width: 100%; /* ensure it doesn't expand sideways */
+}
+
+/* Mobile: stack vertically on small screens */
+@media (max-width: 1120px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .contact-card h2 {
+    margin: 0 auto clamp(1rem, 4vw, 2rem) auto;
+    text-align: center;
+  }
+
+  .contact-form {
+    margin: 0 auto;
+    width: clamp(18rem, 80vw, 25rem);
+  }
 }
 
 

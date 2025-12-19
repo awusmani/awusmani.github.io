@@ -27,7 +27,7 @@ export default function App() {
         </section>
 
         <section id="tab4" className="page-section">
-          {/* <Contact /> */}
+          <Contact />
         </section>
       </main>
 
