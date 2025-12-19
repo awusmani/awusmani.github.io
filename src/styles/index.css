@@ -1,10 +1,10 @@
-/* Mobile-first: smaller image, scroll attachment */
+/* Mobile-first: smaller image, fixed attachment */
 body {
   background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.3)), url('/waterfall-5207223-mobile.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
