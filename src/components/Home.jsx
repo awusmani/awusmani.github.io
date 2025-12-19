@@ -8,60 +8,24 @@ export default function Home() {
 
       <div className="nametext">
         <div className="wrapper">
-          <div id="A" className="letter">A</div>
-          <div className="shadow">A</div>
-        </div>
-        <div className="wrapper">
-          <div id="B" className="letter">B</div>
-          <div className="shadow">B</div>
-        </div>
-        <div className="wrapper">
-          <div id="D" className="letter">D</div>
-          <div className="shadow">D</div>
-        </div>
-        <div className="wrapper">
-          <div id="U" className="letter">U</div>
-          <div className="shadow">U</div>
-        </div>
-        <div className="wrapper">
-          <div id="L" className="letter">L</div>
-          <div className="shadow">L</div>
+          <div id="A" className="first-initial letter">A.</div>
+          <div className="shadow">A.</div>
         </div>
         <div className="wrapper">
           <div id="space" className="letter"></div>
           <div className="shadow"> </div>
         </div>
         <div className="wrapper">
-          <div id="W" className="letter">W</div>
-          <div className="shadow">W</div>
+          <div id="WASAY" className="middle-name letter">W A S A Y</div>
+          <div className="shadow">W A S A Y</div>
         </div>
         <div className="wrapper">
           <div id="space" className="letter"></div>
           <div className="shadow"> </div>
         </div>
         <div className="wrapper">
-          <div id="Utwo" className="letter">U</div>
-          <div className="shadow">U</div>
-        </div>
-        <div className="wrapper">
-          <div id="S" className="letter">S</div>
-          <div className="shadow">S</div>
-        </div>
-        <div className="wrapper">
-          <div id="M" className="letter">M</div>
-          <div className="shadow">M</div>
-        </div>
-        <div className="wrapper">
-          <div id="Atwo" className="letter">A</div>
-          <div className="shadow">A</div>
-        </div>
-        <div className="wrapper">
-          <div id="N" className="letter">N</div>
-          <div className="shadow">N</div>
-        </div>
-        <div className="wrapper">
-          <div id="I" className="letter">I</div>
-          <div className="shadow">I</div>
+          <div id="USMANI" className="last-name letter">U S M A N I</div>
+          <div className="shadow">U S M A N I</div>
         </div>
       </div>
     </section>

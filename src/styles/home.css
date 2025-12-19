@@ -1,28 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
 
-.overlay {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 30vh;
-	z-index: 100;
-}
-
 .nametext {
 	font-family: "Yanone Kaffeesatz";
-	font-size: 100px;
+	font-size: clamp(40px, 10vw, 100px);
 	font-weight: 200;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 	user-select: none;
+	max-width: 90vw;
+
+	.first-initial,
+	.middle-name,
+	.last-name {
+		display: flex;
+		white-space: nowrap;
+	}
 
 	.wrapper {
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-top: 20px;
+		padding-left: clamp(8px, 2vw, 20px);
+		padding-right: clamp(8px, 2vw, 20px);
+		padding-top: clamp(8px, 2vw, 20px);
 		.letter {
 			transform: translateY(40%);
 		}

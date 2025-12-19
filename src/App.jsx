@@ -15,7 +15,7 @@ export default function App() {
 
       <main>
         <section id="tab1" className="page-section">
-          {/* <Home /> */}
+          <Home />
         </section>
 
         <section id="tab2" className="page-section">
