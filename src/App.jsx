@@ -15,19 +15,19 @@ export default function App() {
 
       <main>
         <section id="tab1" className="page-section">
-          <Home />
+          {/* <Home /> */}
         </section>
 
         <section id="tab2" className="page-section">
-          <About />
+          {/* <About /> */}
         </section>
 
         <section id="tab3" className="page-section">
-          <Experience />
+          {/* <Experience /> */}
         </section>
 
         <section id="tab4" className="page-section">
-          <Contact />
+          {/* <Contact /> */}
         </section>
       </main>
 

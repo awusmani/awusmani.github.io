@@ -1,12 +1,22 @@
+/* Mobile-first: smaller image, scroll attachment */
 body {
-  /* image from public/ (use leading slash) */
-  background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.3)), url('/waterfall-5207223.jpg');
+  background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.3)), url('/waterfall-5207223-mobile.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* optional: parallax-like effect on desktop */
+  background-attachment: scroll;
   min-height: 100vh;
   margin: 0;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Desktop: full resolution with parallax effect */
+@media (min-width: 769px) {
+  body {
+    background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.3)), url('/waterfall-5207223.jpg');
+    background-attachment: fixed;
+  }
 }
 
 /* Frosted glass styles for contact card and fields */
