@@ -1,10 +1,5 @@
 import { useState } from 'react';
-import emailjs from 'emailjs-com';
 import '../styles/contact.css';
-
-const SERVICE_ID = "service_bdagcir";
-const TEMPLATE_ID = "template_bf0mtvb";
-const PUBLIC_KEY = "37Ej6QBsT";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -17,28 +12,34 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const sendEmail = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    emailjs.send(
-      SERVICE_ID,
-      TEMPLATE_ID,
-      form,
-      PUBLIC_KEY
-    ).then(() => {
-      alert("Message sent!");
-      setForm({ name: "", email: "", message: "" });
-    }).catch(err => {
-      console.error(err);
-      alert("Failed to send. Check console.");
-    });
+    try {
+      const response = await fetch("https://formspree.io/f/xwvevqoe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(form)
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      alert("An error occurred. Please try again.");
+    }
   };
 
   return (
     <div className="contact-card frosted-card">
       <h2>Lets Connect -</h2>
 
-      <form className="contact-form" onSubmit={sendEmail}>
+      <form className="contact-form" onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
