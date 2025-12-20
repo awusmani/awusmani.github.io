@@ -1,0 +1,49 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: clamp(12px, 2vw, 20px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 24px);
+}
+
+.skill-card {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(4px, 0.75vw, 6px);
+  padding: clamp(16px, 3vw, 24px);
+}
+
+.skill-logo {
+  max-width: 85%;
+  max-height: 70%;
+  object-fit: contain;
+  filter: brightness(0);
+}
+
+.skill-name {
+  font-family: "Yanone Kaffeesatz";
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Dark mode: change logos to white */
+@media (prefers-color-scheme: dark) {
+  .skill-logo {
+    filter: brightness(0) invert(1);
+  }
+}
+
+/* Mobile: 2x4 grid on small screens */
+@media (max-width: 769px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}

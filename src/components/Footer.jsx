@@ -8,6 +8,8 @@ export default function Footer() {
       <div className="footer-center">
         &copy; {new Date().getFullYear()} Abdul W Usmani{' '}
       </div>
+      <div className="footer-right" aria-hidden>
+      </div>
     </footer>
   );
 }

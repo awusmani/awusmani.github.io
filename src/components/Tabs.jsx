@@ -11,8 +11,9 @@ export default function Tabs({ activeTab, setActiveTab }) {
   const tabs = [
     { id: 'tab1', label: 'Home' },
     { id: 'tab2', label: 'About' },
-    { id: 'tab3', label: 'Experience' },
-    { id: 'tab4', label: 'Contact' },
+    { id: 'tab3', label: 'Skills' },
+    { id: 'tab4', label: 'Experience' },
+    { id: 'tab5', label: 'Contact' },
   ];
 
   const updateUnderline = () => {

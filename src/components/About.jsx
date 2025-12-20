@@ -15,7 +15,7 @@ export default function About() {
 
         <h3 className="about-sub">Skills & Tools</h3>
         <ul className="about-list">
-          <li>Java/Scala, Python, AWS, Amazon Q</li>
+          <li>Java/Scala, Python, AWS, Amazon Q, Claude</li>
           <li>JavaScript (ES6+), React, Vite</li>
           <li>HTML5, CSS3, Responsive Design</li>
           <li>Git, GitHub, CI / CD basics</li>
