@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: clamp(8px, 2vw, 12px);
-  width: clamp(20rem, 50vw, 25rem);
-  margin: auto clamp(2rem, 8vw, 5rem) auto auto;
-
+  width: 75%;
+  margin: 0 auto;
 }
 
 .contact-form input,
@@ -27,17 +26,19 @@
 
 .contact-card { /* wrapper around form (semantic) */
   display: grid;
-  grid-template-columns: 1fr auto;
-  padding: clamp(6px, 1.5vw, 8px);
+  grid-template-columns: 1fr 1fr;
+  padding: clamp(8px, 2vw, 24px);
   margin: auto;
   max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-card h2 {
   font-family: "Yanone Kaffeesatz";
   font-weight: 300;
   font-size: clamp(3rem, 10vw, 5rem);
-  margin: auto auto auto clamp(2rem, 15vw, 100px);
+  margin: auto;
 }
 
 /* textarea-specific: only allow vertical resizing and prevent horizontal growth */
@@ -64,7 +65,7 @@ textarea.frosted-input,
 
   .contact-form {
     margin: 0 auto;
-    width: clamp(18rem, 80vw, 25rem);
+    width: 100%;
   }
 }
 

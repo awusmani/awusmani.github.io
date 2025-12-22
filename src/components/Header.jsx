@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Tabs from './Tabs';
 import '../styles/header.css';
+import Hamburger from './Hamburger';
 
 export default function Header() {
   const [activeTab, setActiveTab] = useState('tab1');
@@ -9,6 +10,7 @@ export default function Header() {
     <header className="header">
       <div className="header-left" aria-hidden>
         <img src="/android-chrome-512x512.png" alt="myLogo" />
+        <Hamburger activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
 
       <div className="header-center">
