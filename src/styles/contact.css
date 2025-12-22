@@ -11,7 +11,7 @@
   padding: clamp(8px, 2vw, 10px);
   border: 1px solid #ccc;
   border-radius: clamp(4px, 1vw, 6px);
-  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-size: clamp(16px, 2vw, 1rem);
 }
 
 .contact-form button {
