@@ -6,7 +6,7 @@ export default function Skills() {
     { name: 'JavaScript', logo: '/logos/java-script.png' },
     { name: 'React', logo: '/logos/react.png' },
     { name: 'CSS3', logo: '/logos/css-3.png' },
-    { name: 'HTML', logo: '/logos/html.png' },
+    { name: 'HTML5', logo: '/logos/html.png' },
     { name: 'Python', logo: '/logos/python.png' },
     { name: 'AWS', logo: '/logos/social.png' },
     { name: 'AI', logo: '/logos/ai.png' },
