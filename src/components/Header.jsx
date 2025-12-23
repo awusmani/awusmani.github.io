@@ -26,6 +26,13 @@ export default function Header() {
           <img src="/github-mark.png" alt="GitHub" />
         </a>
         <a
+          href="https://gitlab.com/ausmani1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/gitlab-logo-600-rgb.png" alt="GitLab" />
+        </a>
+        <a
           href="https://www.linkedin.com/in/awusmani/"
           target="_blank"
           rel="noopener noreferrer"
