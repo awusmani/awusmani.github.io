@@ -38,4 +38,18 @@
   .header-center {
     display: none;
   }
+
+  /* Make header bigger on mobile */
+  .header {
+    padding: clamp(10px, 3vw, 16px) clamp(16px, 4vw, 24px);
+    gap: clamp(10px, 3vw, 16px);
+  }
+
+  .header img {
+    width: clamp(2rem, 6vw, 2.5rem);
+  }
+
+  .header-right {
+    gap: clamp(10px, 3vw, 16px);
+  }
 }

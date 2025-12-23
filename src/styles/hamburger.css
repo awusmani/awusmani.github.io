@@ -118,4 +118,24 @@
   .hamburger-container {
     display: block;
   }
+
+  /* Make hamburger icon bigger on mobile */
+  .hamburger-button {
+    padding: clamp(10px, 3vw, 14px);
+    gap: clamp(5px, 1.5vw, 7px);
+  }
+
+  .hamburger-line {
+    width: clamp(28px, 7vw, 36px);
+    height: clamp(3px, 0.75vw, 4px);
+  }
+
+  /* Adjust animation transforms for bigger size */
+  .hamburger-button.open .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(clamp(6px, 2vw, 8px), clamp(6px, 2vw, 8px));
+  }
+
+  .hamburger-button.open .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(clamp(6px, 2vw, 8px), clamp(-6px, -2vw, -8px));
+  }
 }
